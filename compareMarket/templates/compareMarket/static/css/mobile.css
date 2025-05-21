@@ -1,0 +1,151 @@
+@import url(estilos.css);
+
+@media screen and (max-width:1000px){
+    .caja{
+        width: 80%;
+        gap: 10px;
+        padding: 0;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .resultado{
+        border: none;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .resultado h2{
+        margin: 0px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .resultado picture{
+        margin: 0;
+        width: 30%;
+        margin: auto;
+        display: flex;
+    }
+    .uno{
+        order: 2;
+        width: 48%;
+    }
+    .dos{
+        order: 1;
+        width: 70%;
+        max-width: 424px;
+    }
+    .dos picture{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .tres{
+        order: 3;
+        width: 48%;
+    }
+    #seleccionado{
+        min-height: 100px;
+    }
+    #seleccionado p{
+        font-size: 16px;
+    }
+    #seleccionado p:last-child{
+        font-size: 12px;
+    }
+    #seleccionado h3{
+        font-size: 34px;
+    }
+    .precio{
+        max-height: 382px;
+        min-height: 80px;
+        gap: 3px;
+    }
+    .precio p{
+        font-size: 12px;
+    }
+    .precio h3{
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
+    .regresar a{
+        padding: 4px 100px;
+        background-color: #c71e1f;
+        border-radius: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:480px) {
+    body{
+        background-position: center;
+        min-height: 100vh;
+    }
+    header{
+        margin-top: 0;
+    }
+    .titulo{
+        width: 80%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .titulo h1{
+        font-size: 32px;
+        /*word-wrap: break-word;*/
+    }
+    .formulario{
+        width: 80%;
+        margin-top: 0px;
+    }
+    .formulario button{
+        padding: 0px 10px;
+    }
+    .filtro{
+        padding-left: 0px;
+    }
+    .filtro p{
+        font-size: 16px;
+    }
+    .description{
+        width: 80%;
+        padding-left: 0px;
+    }
+    .parrafo{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0px;
+    }
+    .parrafo picture img{
+        margin-bottom: -20px;
+    }
+    .parrafo p{
+        font-size: 20px;
+    }
+    .supermercados{
+        width: 100%;
+    }
+    .segmento input{
+        width: 100%;
+    }
+    .supermercados ul{
+        flex-direction: column;
+    }
+    .supermercados ul li{
+        border: 2px rgb(167, 167, 167) solid;
+        padding: 12px 32px;
+        width: 100%;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .supermercados ul li:last-child{
+        border-bottom: 2px rgb(167, 167, 167) solid;;
+    }
+    .resultado h2{
+        font-size: 12px;
+    }
+}

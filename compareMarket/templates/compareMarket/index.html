@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompareMarker - Comparador de productos de supermercado</title>
+
+    {% load static %}
+
+    <link rel="icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+</head>
+<body>
+    <header>
+        <div class="titulo ancho">
+            <h1>Comparador de productos de supermercado</h1>
+        </div>
+    </header>
+    <aside class="centrar-flex">
+        <form class="formulario ancho" action="{% url 'search' %}" method="get">
+            <div class="buscador">
+                <input id="leer" name="productSearch" type="text" placeholder="Buscar producto" required>
+                <input id="search" type="submit" value="Buscar" onclick="loading()">
+            </div>
+            <br>
+            <div class="filtro ancho">
+                <label class="switch">
+                    <input name="filterActive" type="checkbox" id="busqueda" onclick="filtro()">
+                    <span class="slider round"></span>
+                </label>
+                <p>Filtro de busqueda</p>
+            </div>
+            <aside id="desplegar" style="display:none">
+                <div class="supermercados ancho">
+                    <ul>
+                        <li><input name="searchWalmart" type="checkbox" checked>Walmart</li>
+                        <li><input name="searchChedraui" type="checkbox" checked>Chedraui</li>
+                        <li><input name="searchSuperAki" type="checkbox" checked>Super Aki</li>
+                    </ul>
+                </div>
+{#                <div class="segmento ancho">#}
+{#                    <input name="productBrand" type="text" placeholder="Marca">#}
+{#                    <input name="productName" type="text" placeholder="Producto">#}
+{#                    <input name="productAmount" type="text" placeholder="Cantidad">#}
+{#                </div>#}
+            </aside>
+            <section id="description" style="display:block" class="description ancho">
+                <article class="parrafo">
+                    <picture>
+                        <img src="{% static 'img/cuete.svg' %}" alt="">
+                    </picture>
+                    <p>Búsqueda en tiempo real entre los mejores supermercados de Mérida</p>
+                </article>
+                <article class="parrafo">
+                    <picture>
+                        <img src="{% static 'img/uno.svg' %}" alt="">
+                    </picture>
+                    <p>Busqueda 24/7 por lo que podrá consultar sus productos en todo momento</p>
+                </article>
+                <article class="parrafo">
+                    <picture>
+                        <img src="{% static 'img/new.svg' %}" alt="">
+                    </picture>
+                    <p>Productos y precios actualizados al momento en cada búqueda</p>
+                </article>
+            </section>
+        </form>
+    </aside>
+    <div class="loading" id="carga" style="display: none">
+        <img src="{% static 'img/loading.gif' %}" alt="">
+        <p>Comparando productos</p>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
